@@ -1,6 +1,14 @@
 % demonstration of a SingleLayeredPerceptron
 % data files come from: http://cis.jhu.edu/~sachin/digit/digit.html
 % help taken from: http://www.saedsayad.com/artificial_neural_network_bkp.htm
+%
+% The task is to differentiate between hand written digits 2 and 5
+%
+% We evaluate and show on the misclassification results
+% 
+% The architecture is simple - using just one single perceptron
+%
+%
 
 close all
 clear all
@@ -88,7 +96,9 @@ while ~feof(fid2)
 end
 fclose(fid5);
 fclose(fid2);
+overallAcc = (1-sum(correctPredict)/ size(correctPredict, 2))*100
 
-for i = 1:size(misClassifiedData, 2)
-    imshow(reshape(misClassifiedData(:, i), 28, 28)); drawnow;
-end
+% if you want to see the misclassified samples uncomment below
+% for i = 1:size(misClassifiedData, 2)
+%     imshow(reshape(misClassifiedData(:, i), 28, 28)); drawnow;
+% end
