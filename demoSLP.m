@@ -4,7 +4,7 @@
 %
 % The task is to differentiate between hand written digits 2 and 5
 %
-% We evaluate and show on the misclassification results
+% We evaluate and show only the misclassification results
 % 
 % The architecture is simple - using just one single perceptron
 %
